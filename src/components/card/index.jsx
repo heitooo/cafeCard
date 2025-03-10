@@ -1,34 +1,35 @@
 import "./styles.css";
-//import { Categoria } from "../tagCategoria";
-//import { Titulo } from "../tituloProd";
-//import { Descricao } from "../descricao";
 import { ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
-export function Card({ coffeeImg, category, title, description }) {
+export function Card({ id, title, description, tags, price, image }) {
   const [count, setCount] = useState(0);
   return (
-    <>
-      <img src={coffeeImg} alt="" />
-      <p>{category}</p>
+    <div className="card">
+      <img src={image} alt="" id="card-img" />
+      <p>{id}</p>
       <h2>{title}</h2>
+      <p id="tag">{tags}</p>
       <p> {description}</p>
+      <p>{price}</p>
+      
 
-      <div id="preco">
-        R$ <strong>9,90</strong>
-      </div>
+      <div id="botoes">
+        <div id="preco">
+          R$ <strong>9,90</strong>
+        </div>
+        <div id="botao">
+          <button onClick={() => setCount(count - 1)}>-</button>
+          <p>{count}</p>
+          <button onClick={() => setCount(count + 1)}>+</button>
+        </div>
 
-      <div>
-        <button onClick={() => setCount(count - 1)}>-</button>
-        <p>{count}</p>
-        <button onClick={() => setCount(count + 1)}>+</button>
+        <div>
+          <button type="button" id="carrinho">
+            <ShoppingCart size={16} />
+          </button>
+        </div>
       </div>
-
-      <div>
-        <button type="button">
-          <ShoppingCart size={16} />
-        </button>
-      </div>
-    </>
+    </div>
   );
 }
