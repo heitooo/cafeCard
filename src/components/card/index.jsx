@@ -1,34 +1,40 @@
-import "./styles.css";
 import { ShoppingCart } from "lucide-react";
-import { useState } from "react";
 
-export function Card({ id, title, description, tags, price, image }) {
-  const [count, setCount] = useState(0);
+import "./styles.css";
+
+export function Card({ image, tags, title, description }) {
   return (
-    <div className="card">
-      <img src={image} alt="" id="card-img" />
-      <p>{id}</p>
-      <h2>{title}</h2>
-      <p id="tag">{tags}</p>
-      <p> {description}</p>
-      <p>{price}</p>
+    <div id="card">
+      <img src={image} alt={title} id="coffeeImg" />
+
       
+      <div className="tags-container">
+        {tags.map((tag, index) => (
+          <div className="tag" key={index}>
+            <span>{tag}</span>
+          </div>
+        ))}
+      </div>
 
-      <div id="botoes">
-        <div id="preco">
-          R$ <strong>9,90</strong>
-        </div>
-        <div id="botao">
-          <button onClick={() => setCount(count - 1)}>-</button>
-          <p>{count}</p>
-          <button onClick={() => setCount(count + 1)}>+</button>
+      <h1>{title}</h1>
+      <p className="description">{description} </p>
+
+      <div id="details">
+        <div className="price">
+          <p>
+            R$ <strong>9,90</strong>
+          </p>
         </div>
 
-        <div>
-          <button type="button" id="carrinho">
-            <ShoppingCart size={16} />
-          </button>
+        <div id="quantityButtons">
+          <button type="button">-</button>
+          <span>1</span>
+          <button>+</button>
         </div>
+
+        <button type="button" className="shoppingBtn">
+          <ShoppingCart color="#F3F2F2" fill="#F3F2F2" size={20} />
+        </button>
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ export function App() {
 
         {/* COLOCAR A RENDERIZAÇÃO DOS CARDS AQUI */}
 
-        <div id="grid">
+        <div className="grid">
           {data.coffees.map((coffees) => {
             return (
               <Card
