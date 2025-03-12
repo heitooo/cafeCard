@@ -6,7 +6,6 @@ export function Card({ image, tags, title, description }) {
   return (
     <div id="card">
       <img src={image} alt={title} id="coffeeImg" />
-
       
       <div className="tags-container">
         {tags.map((tag, index) => (
