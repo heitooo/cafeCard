@@ -8,7 +8,7 @@
 :root {
   --roboto: "Roboto", sans-serif;
   --baloo: "Baloo 2", sans-serif;
-
+  
   --title-xl-b: 800 48px/130% var(--baloo);
   --title-l-b: 800 32px/130% var(--baloo);
   --title-m-b: 800 24px/130% var(--baloo);

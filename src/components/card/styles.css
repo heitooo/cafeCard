@@ -103,12 +103,12 @@ h1 {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  color: #8047f8;
+  color: var(--purple);
   font-size: 14px;
 }
 
 .shoppingBtn {
-  background-color: #4b2995;
+  background-color: var(--purple-dark);
   padding: 8px;
   border-radius: 8px;
   border: none;

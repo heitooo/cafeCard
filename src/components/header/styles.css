@@ -16,10 +16,10 @@ nav {
   gap: 4px;
   padding: 10px 8px;
   border-radius: 6px;
-  background-color: #ebe5f9;
+  background-color: var(--purple-light);
 
   p {
-    color: #4b2995;
+    color: var(--purple-dark);
     font-size: 14px;
     font-family: "Roboto", sans-serif;
   }
@@ -29,4 +29,7 @@ nav {
   background-color: #f1e9c9;
   padding: 8px;
   border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
